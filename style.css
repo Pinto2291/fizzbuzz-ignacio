@@ -1,0 +1,130 @@
+:root {
+    --font-family-helvetica: Helvetica;
+    --bg-black: #181515;
+    --bg-purple-1: #6c5ce7;
+    --font-white : #FFF;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:after, *:before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--font-family-helvetica);
+    margin: 0;
+    background-color: var(--bg-black);
+    color: var(--font-white);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+}
+
+/* Navegacion */
+
+.navegacion {
+    background-color: var(--bg-purple-1);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.lista {
+    font-size: 1.5rem;
+    margin: 2rem;
+}
+
+.lista > li {
+    margin-bottom: 1.5rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: justify;
+    line-height: 3rem;
+}
+
+/* Main */
+
+.main-section {
+    display: grid;
+    grid-template: repeat(2, 1fr)/ repeat(3, 1fr);
+    gap: 0.5rem;
+    justify-items:  center;
+    margin: 1.5rem 2rem;
+}
+
+.text-style {
+    color: var(--font-white);
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--bg-purple-1);
+    border: 0.25rem solid white;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    width: 12rem;
+    text-align: center;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+/* Boton */
+
+.btn {
+    font-size: 2rem;
+    padding: 1.5rem;
+    background-color: #FFF;
+    color: black;
+    border-radius: 1rem;
+    font-weight: bold;
+    border: 0.25rem solid var(--bg-purple-1);
+    transition: all 200ms ease-in-out 50ms;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.10);
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--bg-purple-1);
+    font-size: 2rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .main-section {
+        grid-template: repeat(2, 1fr)/ repeat(2, 1fr);
+    }
+}
